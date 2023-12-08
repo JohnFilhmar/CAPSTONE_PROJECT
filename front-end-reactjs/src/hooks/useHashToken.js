@@ -16,7 +16,6 @@ const useEncryptToken = (token) => {
 const useDecryptToken = (encryptedToken) => {
   const decryptedBytes = CryptoJS.AES.decrypt(encryptedToken, encryptionKey);
   const decryptedToken = decryptedBytes.toString(CryptoJS.enc.Utf8);
-  
   return decryptedToken;
 };
 

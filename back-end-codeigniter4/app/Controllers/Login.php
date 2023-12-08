@@ -31,15 +31,15 @@ class Login extends BaseController
         }
  
         $key = getenv('JWT_SECRET');
-        $iat = time(); // current timestamp value
+        $iat = time();
         $exp = $iat + 3600;
- 
+
         $payload = array(
             "iss" => "Issuer of the JWT",
             "aud" => "Audience that the JWT",
             "sub" => "Subject of the JWT",
-            "iat" => $iat, //Time the JWT issued at
-            "exp" => $exp, // Expiration time of token
+            "iat" => $iat,
+            "exp" => $exp,
             "email" => $user['email'],
         );
         
